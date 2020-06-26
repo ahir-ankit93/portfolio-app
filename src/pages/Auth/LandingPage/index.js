@@ -39,10 +39,10 @@ const LandingPage = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <a href="#about">ABOUT</a>
-              <a href="#skills">SKILLS</a>
-              <a href="#projects">PROJECTS</a>
-              <a href="#contacts">CONTACTS</a>
+              <a href="about">ABOUT</a>
+              <a href="skills">SKILLS</a>
+              <a href="projects">PROJECTS</a>
+              <a href="contacts">CONTACTS</a>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -61,10 +61,10 @@ const LandingPage = () => {
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <a href="#about">ABOUT</a>
-              <a href="#skills">SKILLS</a>
-              <a href="#projects">PROJECTS</a>
-              <a href="#contacts">CONTACTS</a>
+              <a href="about">ABOUT</a>
+              <a href="skills">SKILLS</a>
+              <a href="projects">PROJECTS</a>
+              <a href="contacts">CONTACTS</a>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
