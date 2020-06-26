@@ -1,0 +1,116 @@
+.header {
+  .navbar {
+    padding: 0px 0px;
+    line-height: 0px;
+    .navbar-brand {
+      margin-right: 30px;
+      img {
+        height: 75px;
+        width: 75px;
+      }
+    }
+    .navbar-collapse {
+      a {
+        padding: 0.5em 0.3rem;
+        font-size: 0.85em;
+        margin: 0 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all 0.2s linear;
+        color: #ed4c5f;
+        font-weight: 500;
+        &:hover {
+          color: #9a0606;
+        }
+      }
+    }
+    .links {
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 10px 0;
+      list-style: none;
+      a {
+        margin: 0 15px;
+        transition: all 0.2s linear;
+        position: relative;
+        cursor: pointer;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 12px;
+        font-weight: 800;
+        color: #fff;
+        &:hover {
+          color: #ed4c5f;
+          text-decoration: none;
+        }
+      }
+    }
+    .button-wrapper {
+      display: flex;
+      padding: 10px 0;
+      list-style: none;
+      align-items: center;
+      margin: auto 0 0;
+      .login {
+        padding: 0 5px;
+        &:hover {
+          color: transparent;
+          text-decoration: none;
+        }
+        span {
+          color: #212121;
+          background: transparent;
+          border: 3px solid #212121;
+          padding: 12px 25px;
+          margin: auto;
+          cursor: pointer;
+          font-family: "Josefin Sans", sans-serif;
+          font-size: 11px;
+          font-weight: 800;
+        }
+      }
+      .get-started {
+        padding: 0 5px;
+        margin-right: 0;
+        span {
+          border: 3px solid #ed4c5f;
+          background: #ed4c5f;
+          color: #fff;
+          padding: 12px 25px;
+          margin: auto;
+          font-family: "Josefin Sans", sans-serif;
+          font-size: 11px;
+          font-weight: 500;
+          &:hover {
+            background: #ed4c5f;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.2s linear;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .header {
+    .navbar {
+      padding: 10px 15px;
+      .button-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        .login {
+          margin-bottom: 15px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
