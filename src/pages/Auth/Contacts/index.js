@@ -1,10 +1,17 @@
 import React from "react";
-import { Field, reduxForm } from "redux-form";
-import { Col, FormGroup, Label, Form } from "reactstrap";
-import ValidatedInput from "../../../components/ValidatedInput";
-import { connect } from "react-redux";
+import { Col, FormGroup, Label } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhoneSquareAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPhoneSquareAlt,
+  faEnvelopeSquare,
+  faMobileAlt,
+  faLink,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faMedium,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Contacts = () => {
   return (
@@ -16,87 +23,80 @@ const Contacts = () => {
           </h1>
         </div>
         <hr />
-        <Form className="form-container">
-          <h6>
-            If you are looking for a collaboration or you think I could be of
-            help with to ideas, hit me up! Or just say Hi so that I know you've
-            stopped by.
-          </h6>
 
+        <div className="manageContacts">
           <FormGroup row>
-            <Label sm={4}>Name</Label>
-            <Col sm={7}>
-              <Field
-                component={ValidatedInput}
-                type="text"
-                name="name"
-                placeholder="Name"
-              />
-            </Col>
-          </FormGroup>
-
-          <FormGroup row>
-            <Label sm={4} xs={12}>
-              Email Address
+            <Col sm={2}></Col>
+            <Label sm={9}>
+              If you are looking for a collaboration or you think I could be of
+              help with to ideas, hit me up! Or just say Hi so that I know
+              you've stopped by.
             </Label>
-            <Col sm={7} xs={10}>
-              <Field
-                component={ValidatedInput}
-                type="email"
-                name="email"
-                placeholder="Email"
-              />
-            </Col>
+            <Col sm={1}></Col>
           </FormGroup>
-
           <FormGroup row>
-            <Label sm={4}>Message</Label>
-            <Col sm={7}>
-              <Field
-                component={ValidatedInput}
-                type="textarea"
-                name="message"
-                placeholder="Message here"
-              />
-            </Col>
+            <Col sm={3}></Col>
           </FormGroup>
-
-          <div className="button_wrapper">
-            <button className="custom-btn-primary" type="submit">
-              Let's Connect
-            </button>
-          </div>
-        </Form>
+          <FormGroup row>
+            <Col sm={3}></Col>
+            <Label sm={3}>
+              <FontAwesomeIcon icon={faEnvelopeSquare} />
+              &nbsp; Email
+            </Label>
+            <Col sm={1}>:</Col>
+            <Label sm={3}>ahir.ankit93@gmail.com</Label>
+            <Col sm={2}></Col>
+          </FormGroup>
+          <FormGroup row>
+            <Col sm={3}></Col>
+            <Label sm={3}>
+              <FontAwesomeIcon icon={faMobileAlt} />
+              &nbsp; Mobile
+            </Label>
+            <Col sm={1}>:</Col>
+            <Label sm={3}>+918238888843</Label>
+            <Col sm={2}></Col>
+          </FormGroup>
+          <FormGroup row>
+            <Col sm={3}></Col>
+            <Label sm={3}>
+              <FontAwesomeIcon icon={faLink} />
+              &nbsp; Social Links
+            </Label>
+            <Col sm={1}>:</Col>
+            <Label sm={3}>
+              <h3>
+                <a
+                  href="https://medium.com/@ahir.ankit93"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <FontAwesomeIcon icon={faMedium} />
+                </a>
+                &nbsp;&nbsp;
+                <a
+                  href="https://github.com/ahir-ankit93"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+                &nbsp;&nbsp;
+                <a
+                  href="https://www.linkedin.com/in/ankit-ahir-40982058"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+              </h3>
+            </Label>
+            <Col sm={2}></Col>
+          </FormGroup>
+        </div>
       </div>
     </div>
   );
 };
 
-const validate = (values) => {
-  const errors = {};
-  if (!values.name) {
-    errors.name = "Field is required";
-  }
-  if (!values.message) {
-    errors.message = "Field is required";
-  }
-
-  if (!values.email) {
-    errors.email = "Field is required";
-  }
-  if (
-    values.email &&
-    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-  ) {
-    errors.email = "Invalid email address";
-  }
-
-  return errors;
-};
-
-const ContactsComponent = connect()(Contacts);
-
-export default reduxForm({
-  form: "ContactsForm",
-  validate,
-})(ContactsComponent);
+export default Contacts;

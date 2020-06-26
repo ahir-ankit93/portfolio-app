@@ -105,6 +105,15 @@
         }
     }
 }
+.manageContacts {
+    font-size: x-large;
+    font-weight: bolder;
+    border: none;
+    outline: none;
+    .a {
+        color: #ed4c5f;
+    }
+}
 .brpro {
     border-radius: 4rem;
 }
@@ -178,7 +187,7 @@
     border-radius: 30%;
     width: 200px;
     height: 200px;
-    background-image: url(../../../Images/andy.jpg);
+    background-image: url(../../../Images/ankit.JPG);
 }
 .footer-text-section {
     position: absolute;

@@ -111,7 +111,7 @@ const Projects = () => {
                 Software.
               </CardText>
             </Card>
-            <br />
+            {/* <br />
             <Card body outline color="info" className="animate">
               <CardTitle>Career Path System ( Asp.Net with C# )</CardTitle>
               <CardText>
@@ -129,7 +129,7 @@ const Projects = () => {
                 poor, protect the environment, provide basic social services, or
                 undertake community development
               </CardText>
-            </Card>
+            </Card> */}
           </Container>
         </Jumbotron>
       </Form>
